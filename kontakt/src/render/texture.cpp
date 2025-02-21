@@ -3,6 +3,22 @@
 namespace kt
 {
 
+	TextureResource::TextureResource()
+	{
+
+	}
+
+	TextureResource::~TextureResource()
+	{
+
+	}
+
+	bool TextureResource::Init()
+	{
+
+		return false;
+	}
+
 	Texture::Texture()
 	{
 

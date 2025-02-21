@@ -3,6 +3,22 @@
 namespace kt
 {
 
+	BufferResource::BufferResource()
+	{
+
+	}
+
+	BufferResource::~BufferResource()
+	{
+
+	}
+
+	bool BufferResource::Init()
+	{
+
+		return false;
+	}
+
 	Buffer::Buffer()
 	{
 
