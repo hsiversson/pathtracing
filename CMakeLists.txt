@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
+
+set(CMAKE_CONFIGURATION_TYPES Debug Release RelWithDebInfo CACHE TYPE INTERNAL FORCE)
+
+project("Pathtracer")
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+
+find_package(Vulkan REQUIRED COMPONENTS dxc)
+
+set(KONTAKT_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/kontakt/include")
+set(KONTAKT_SRC_DIR "${PROJECT_SOURCE_DIR}/kontakt/src")
+
+add_subdirectory(sample)
+add_subdirectory(kontakt/src)
